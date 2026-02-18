@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Why I Chose Python | Selin Shahi</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            Selin Shahi
+        </div>
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../cv.html">CV</a>
+            <a href="../projects.html">Projects</a>
+        </nav>
+        <div class="menu-btn">&#9776;</div>
+    </header>
+    <main class="article-page">
+
+    <h1>Why I Chose Python as My First Programming Language</h1>
+
+    <p class="article-meta">
+        Selin Shahi · Computer Science · 2024
+    </p>
+
+    <p>
+        As a first-year computer science student, I have come to realize that the digital
+        world is far more sophisticated than what we perceive in our daily lives. Computers
+        have become indispensable across nearly every discipline, serving as the backbone
+        of modern industries and research. In essence, much of our world now revolves around code.
+    </p>
+
+    <p>
+        This realization motivated me to explore the field of programming more deeply. For my
+        first programming language, I chose Python due to its simplicity, readability, and
+        close resemblance to human language.
+    </p>
+
+    <p>
+        In this article, I outline the reasons why Python is an excellent starting point for
+        beginners in computer science and present a practical project I developed using
+        Python and a relational database — a Library Management System.
+    </p>
+
+    <h2>Why Python is a Great First Language</h2>
+
+    <h3>1. Simplicity</h3>
+    <p>
+        Python is known for its clean and intuitive syntax, which closely resembles natural
+        language. This simplicity allows beginners to grasp fundamental programming concepts
+        more easily compared to many other languages.
+    </p>
+
+    <h3>2. Abundant Learning Resources</h3>
+    <p>
+        Python offers a vast ecosystem of tutorials, documentation, and educational materials,
+        ensuring that learners at every level can find guidance.
+    </p>
+
+    <h3>3. Versatility of Applications</h3>
+    <p>
+        Python is widely used across domains such as algorithms, artificial intelligence,
+        database management, web development, and data analysis.
+    </p>
+
+    <h3>4. Strong Career Prospects</h3>
+    <p>
+        Python consistently ranks among the most in-demand programming languages worldwide,
+        creating strong academic and professional opportunities.
+    </p>
+
+    <h2>Learning Algorithms with Python</h2>
+
+    <p>
+        Algorithms form the foundation of problem-solving in computer science. Python’s
+        readability allows students to focus on logic and design rather than syntax complexity.
+    </p>
+
+    <div class="code-box">
+<pre><code>
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+numbers = [10, 25, 30, 45, 50]
+result = linear_search(numbers, 30)
+
+if result != -1:
+    print(f"number in index found: {result}")
+else:
+    print("The number doesn’t find")
+</code></pre>
+    </div>
+
+    <p>
+        This example demonstrates a simple linear search algorithm, helping beginners
+        understand basic iteration and condition checking.
+    </p>
+
+    <h2>Library Management System Project</h2>
+
+    <p>
+        The sample project presented in this article is a Library Management System developed
+        using Python and MySQL. It allows users to manage books and library members efficiently.
+    </p>
+
+    <div class="code-box">
+<pre><code>
+class Book:
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+
+    def info(self):
+        return f'{self.title} - {self.author}, ({self.year})'
+</code></pre>
+    </div>
+
+    <h2>Tools & Technologies</h2>
+
+    <ul>
+        <li><strong>Programming Language:</strong> Python</li>
+        <li><strong>Database:</strong> MySQL</li>
+        <li><strong>Library:</strong> mysql-connector-python</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>
+        Learning Python as a first programming language provided me with a strong foundation
+        in computer science concepts and the confidence to apply them in practice.
+    </p>
+
+    <p>
+        This project represents my first complete application and serves as a valuable
+        portfolio project demonstrating how theoretical knowledge can be translated into
+        functional software.
+    </p>
+        <a class="github-link" href="https://github.com/SelinShahi/Bookmanage" target="_blank">
+            View Project on GitHub
+        </a>
+        <hr>
+        <a class="download-btn" href="/essay/Why chose I python.pdf">
+            Download PDF
+        </a>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
