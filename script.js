@@ -1,86 +1,95 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.querySelector(".menu-btn");
-    const nav = document.querySelector(".nav");
+console.log("JS LOADED");
+/* =====================
+   MOBILE SIDE MENU
+===================== */
 
-    if (menuBtn && nav) {
-        menuBtn.addEventListener("click", () => {
-            nav.classList.toggle("show");
-        });
-    }
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const sideMenu = document.getElementById("sideMenu");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
+
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      overlay.classList.add("active");
+    });
+  }
+
+  function closeMenu() {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+  if (overlay) overlay.addEventListener("click", closeMenu);
+
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+/* =====================
+   SEARCH
+===================== */
 
-    const searchInput = document.getElementById("searchInput");
-    const noResults = document.getElementById("noResults");
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (!searchInput) return;
+  const searchInput = document.getElementById("searchInput");
+  const noResults = document.getElementById("noResults");
 
-    searchInput.addEventListener("input", function () {
+  if (!searchInput) return;
 
-        const filter = searchInput.value.trim().toLowerCase();
-        const items = document.querySelectorAll(".item");
+  searchInput.addEventListener("input", () => {
 
-        let visibleCount = 0;
+    const filter = searchInput.value.trim().toLowerCase();
+    const items = document.querySelectorAll(".item");
 
-        items.forEach(function (item) {
+    let visibleCount = 0;
 
-            const text = item.innerText.toLowerCase();
-
-            if (text.includes(filter)) {
-                item.style.display = "";
-                visibleCount++;
-            } else {
-                item.style.display = "none";
-            }
-
-        });
-
-        if (visibleCount === 0) {
-            noResults.style.display = "block";
-        } else {
-            noResults.style.display = "none";
-        }
-
+    items.forEach(item => {
+      const text = item.innerText.toLowerCase();
+      if (text.includes(filter)) {
+        item.style.display = "";
+        visibleCount++;
+      } else {
+        item.style.display = "none";
+      }
     });
 
-});
-
-
-const toggles = document.querySelectorAll(".chapter-toggle");
-
-toggles.forEach(toggle => {
-  toggle.addEventListener("click", () => {
-    toggle.parentElement.classList.toggle("active");
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
   });
+
 });
 
 
-
+/* =====================
+   BOOK CHAPTER TOGGLE
+===================== */
 
 document.querySelectorAll(".chapter-toggle").forEach(button => {
   button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
+    button.parentElement.classList.toggle("active");
   });
 });
 
 
+/* =====================
+   PROGRESS BAR
+===================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const totalChapters = 10; // کل فصل‌هایی که برنامه داری
-  const completedChapters = document.querySelectorAll(".chapter-card.completed").length;
+  const totalChapters = 10;
+  const completedChapters =
+    document.querySelectorAll(".chapter-card.completed").length;
 
   const percentage = Math.round((completedChapters / totalChapters) * 100);
 
   const progressBar = document.querySelector(".progress-bar");
   const progressText = document.querySelector(".progress-text");
 
-  progressBar.style.width = percentage + "%";
-  progressText.textContent = percentage + "% Completed";
+  if (progressBar) progressBar.style.width = percentage + "%";
+  if (progressText) progressText.textContent = percentage + "% Completed";
 
 });

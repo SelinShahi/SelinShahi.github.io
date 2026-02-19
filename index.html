@@ -12,24 +12,39 @@
     <title>Selin Shahi</title>
 </head>
 <body>
-        <header class="header">
-        <div class="logo">
-            Selin Shahi
-        </div>
-        <nav class="nav">
-            <a href="cv.html">CV</a>
-            <a href="article.html">Article</a>
-            <a href="projects.html">Project</a>
-            <a href="/book/index.html">Book</a>
-        </nav>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="search...">
-            <p id="noResults" style="display: none; margin-top: 20px;">
-                No Result Found
-            </p>
-        </div>
-        <div class="menu-btn">&#9776;</div>
-    </header>
+<header class="header">
+  <div class="logo">Selin Shahi</div>
+
+  <nav class="nav desktop-nav">
+    <a href="cv.html">CV</a>
+    <a href="article.html">Article</a>
+    <a href="projects.html">Project</a>
+    <a href="/book/index.html">Book</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="search...">
+    <p id="noResults" style="display:none; margin-top:20px;">No Result Found</p>
+  </div>
+
+  <!-- فقط این همبرگر -->
+  <div class="menu-btn" id="menuBtn">☰</div>
+</header>
+<!-- Mobile Side Menu -->
+<div class="side-menu" id="sideMenu">
+  <div class="close-btn" id="closeBtn">&times;</div>
+
+  <a href="cv.html">CV</a>
+  <a href="article.html">Article</a>
+  <a href="projects.html">Project</a>
+  <a href="/book/index.html">Book</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+
+
+
     <section class="hero">
         <img src="images/Background.jpg" alt="Hero image">
     </section>

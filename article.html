@@ -7,28 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family = Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="/images/favicon.jpg" type="image/png">
     <title>Selin Shahi</title>
-</head>  
+</head>
 <body>
-    <header class="header">
-        <div class="logo">
-            Selin Shahi
-        </div>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="projects.html">Projects</a>
-            <a href="book/index.html">Book</a>
-        </nav>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="search...">
-            <p id="noResults" style="display: none; margin-top: 20px;">
-                No Result Found
-            </p>
-        </div>
-        <div class="menu-btn">&#9776;</div>
-    </header>
+<header class="header">
+  <div class="logo">Selin Shahi</div>
+
+  <nav class="nav desktop-nav">
+    <a href="index.html">Home</a>
+    <a href="cv.html">CV</a>
+    <a href="projects.html">Project</a>
+    <a href="/book/index.html">Book</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="search...">
+    <p id="noResults" style="display:none; margin-top:20px;">No Result Found</p>
+  </div>
+
+
+  <div class="menu-btn" id="menuBtn">☰</div>
+</header>
+
+<div class="side-menu" id="sideMenu">
+  <div class="close-btn" id="closeBtn">&times;</div>
+
+  <a href="index.html">Home</a>
+  <a href="cv.html">CV</a>
+  <a href="projects.html">Projects</a>
+  <a href="/book/index.html">Book</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
 
     <main class="articles item">
         <h1>Articles</h1>

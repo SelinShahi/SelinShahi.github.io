@@ -103,7 +103,7 @@ nav{
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: #141425;
+    color: white;
 }
 @media(max-width: 768px){
     .nav{
@@ -674,4 +674,79 @@ ul{
 }
 li{
     margin-bottom: 8px;
+}
+/* ---------- HAMBURGER ---------- */
+.menu-btn {
+  display: none;          /* دسکتاپ = مخفی */
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ---------- SIDE MENU ---------- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;          /* خارج از صفحه */
+  width: 260px;
+  height: 100%;
+  background: #0f172a;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.35s ease;
+  z-index: 1001;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* وقتی باز میشه */
+.side-menu.active {
+  right: 0;
+}
+
+/* ---------- CLOSE BTN ---------- */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ---------- OVERLAY ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- MOBILE ONLY ---------- */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;      /* منوی دسکتاپ حذف */
+  }
+}
+.menu-btn{
+    display: none !important;
+}
+@media (max-width: 768px){
+    .menu-btn{
+        display: block !important;
+    }
 }
