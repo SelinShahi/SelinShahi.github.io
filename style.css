@@ -20,11 +20,24 @@ body{
     height: 160px;
     margin-bottom: 0;
 }
+.logo-box{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
 .logo{
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
     color: white;
-    margin-top: -90px;
+    margin-top: -50px;
+}
+.site-motto{
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2px;
+
 }
 nav{
     text-decoration: none;
@@ -484,23 +497,25 @@ nav{
 }
 .book-hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 50px;
   background: linear-gradient(180deg, #0f0f1a 0%, #18182a 100%);
 }
 
 .book-hero h1 {
-  font-size: 38px;
+  font-size: 60px;
   color: #ffffff;
 }
 
 .subtitle {
   color: #c4b5fd;
   margin-bottom: 10px;
+  font-size: 27px;
 }
 
 .last-update {
   color: #aaa;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .progress-container {
@@ -519,6 +534,7 @@ nav{
 .progress-text {
   color: #ddd;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .download-btn {
@@ -543,7 +559,7 @@ nav{
 }
 
 .chapter-card {
-  margin: 20px 0;
+  margin: 30px 0;
   border-radius: 12px;
   overflow: hidden;
   background: #1a1a2e;
@@ -556,7 +572,7 @@ nav{
   color: white;
   border: none;
   text-align: left;
-  font-size: 16px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -569,6 +585,9 @@ nav{
   padding: 20px;
   background: #141425;
   color: #ccc;
+}
+.chapter-content p{
+    font-size: 20px;
 }
 
 .chapter-card.active .chapter-content {
@@ -675,19 +694,19 @@ ul{
 li{
     margin-bottom: 8px;
 }
-/* ---------- HAMBURGER ---------- */
+
 .menu-btn {
-  display: none;          /* دسکتاپ = مخفی */
+  display: none;      
   font-size: 28px;
   cursor: pointer;
   color: white;
 }
 
-/* ---------- SIDE MENU ---------- */
+
 .side-menu {
   position: fixed;
   top: 0;
-  right: -280px;          /* خارج از صفحه */
+  right: -280px;        
   width: 260px;
   height: 100%;
   background: #0f172a;
@@ -705,12 +724,11 @@ li{
   font-size: 18px;
 }
 
-/* وقتی باز میشه */
 .side-menu.active {
   right: 0;
 }
 
-/* ---------- CLOSE BTN ---------- */
+
 .close-btn {
   position: absolute;
   top: 20px;
@@ -720,7 +738,7 @@ li{
   color: white;
 }
 
-/* ---------- OVERLAY ---------- */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -736,10 +754,10 @@ li{
   pointer-events: auto;
 }
 
-/* ---------- MOBILE ONLY ---------- */
+
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;      /* منوی دسکتاپ حذف */
+    display: none;     
   }
 }
 .menu-btn{
