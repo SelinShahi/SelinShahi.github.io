@@ -19,6 +19,7 @@ body{
     padding: 20px 40px;
     height: 160px;
     margin-bottom: 0;
+    box-shadow: 0 8px 30px rgba(124red, 58, 237, 0.15);
 }
 .logo-box{
     display: flex;
@@ -424,10 +425,12 @@ nav{
 .item{
     transition: all 0.3s ease;
     border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)
 }
 .item:hover{
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(91, 45, 139, 0.15);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25);
 }
 .book-containare{
     max-width: 800px;
@@ -632,6 +635,8 @@ body{
     background: #f8f9fb;
     font-family: 'Inter', sans-serif;
     margin: 0;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
 }
 .header-chapter{
     background-color: #141425;
